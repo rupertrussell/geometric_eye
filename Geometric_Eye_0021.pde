@@ -8,7 +8,7 @@
 FloodFill1 myFloodFill ;
 
 int saveCount = 1;
-float scale = 9000;
+float scale = 11800;
 //select target colour
 int targetRed = 0;
 int targetGreen = 0;
@@ -22,8 +22,6 @@ ArrayList<Integer> pixelstochange= new ArrayList();
 
 //set arraylist counter to 0
 int arraylistindex = 0;
-
-boolean outlinesDrawn = false;
 
 // String filename = "large_9411×9411.png";
 // String filename = "Womens_Graphic_Dress_4020×6090.png";
@@ -42,13 +40,13 @@ boolean outlinesDrawn = false;
 // String filename = "Duffle_Bag_4050x7800.png";
 // String filename = "Throw_blanket_7632x6480.png";
 // String filename = "Cotton_Tote_Bag_2280x2760.png";
-String filename = "Clock_2940x2940.png";
+// String filename = "Clock_2940x2940.png";
 
 void setup()
 {
   noSmooth();
   noFill();
-  size(9411, 9411); // Large
+  size(12001, 12001); // Large
   // size(4020, 6090); // Womens_Graphic_Dress
   // size(3873, 4814); // Mens_Graphic_Tee
   // size(6310, 6230); // Aline Dress
@@ -66,7 +64,7 @@ void setup()
 
 void draw() {
   drawOutlines();
-  save("large_9411a.png");
+  save("test.png");
   exit();
 }
 
@@ -94,40 +92,17 @@ void drawOutlines() {
     degree = degree + 360 / numberOfPoints;
   }
 
-
-
-
   // circles
-
-  strokeWeight(1);
   ellipse(0, 0, scale * 1, scale * 1); // outside ring
-
-
   ellipse(0, 0, scale * 0.9955, scale * 0.9955); //
-  stroke(0, 0, 0);
-
   ellipse(0, 0, scale * 0.98, scale * 0.98); //
-
-
-
   ellipse(0, 0, scale * 0.9235, scale * 0.9235); // test
-  stroke(0, 0, 0);
-
-
   ellipse(0, 0, scale * 0.957, scale * 0.957); //
-
-
   ellipse(0, 0, scale * 0.8815, scale * 0.8815); //
-
   ellipse(0, 0, scale * 0.831, scale * 0.831); //
-
-
   ellipse(0, 0, scale * 0.7727, scale * 0.7727); // 
-
   ellipse(0, 0, scale * 0.707, scale * 0.707); // 
-
   ellipse(0, 0, scale * 0.6345, scale * 0.6345); // 
-
   ellipse(0, 0, scale * 0.555, scale * 0.555); // 
   ellipse(0, 0, scale * 0.472, scale * 0.472); // 
   ellipse(0, 0, scale * 0.382, scale * 0.382); // 
@@ -138,39 +113,23 @@ void drawOutlines() {
   ellipse(0, 0, scale * 0.097, scale * 0.097); //  inner white circle
   noFill();
 
-
-
-
-
   // FILL POINTS
   fillPoints(scale * 0.095, 32, 0, 0, 0, 0);
   fillPoints(scale * 0.1, 32, 16, 0, 0, 0);
   fillPoints(scale * 0.15, 32, 0, 0, 0, 0);
   fillPoints(scale * 0.20, 32, 9, 0, 0, 0);
-
   fillPoints(scale * 0.24, 32, 0, 0, 0, 0);
-
   fillPoints(scale * 0.31, 32, 16, 0, 0, 0);
-
   fillPoints(scale * 0.33, 32, 0, 0, 0, 0);
-
   fillPoints(scale * 0.36, 32, 16, 0, 0, 0);
-
   fillPoints(scale * 0.39, 32, 0, 0, 0, 0);
-
   fillPoints(scale * 0.42, 32, 16, 0, 0, 0);
-
   fillPoints(scale * 0.45, 32, 0, 0, 0, 0);
-
   fillPoints(scale * 0.465, 32, 16, 0, 0, 0);
-
   fillPoints(scale * 0.487, 32, 0, 0, 0, 0);
-
   fillPoints(scale * 0.495, 32, 16, 0, 0, 0);
   fillPoints(scale * 0.498, 32, 0, 0, 0, 0);
 
-
-  outlinesDrawn = true; // only draw the outlines once
 }
 
 
