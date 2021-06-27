@@ -3,7 +3,7 @@
 // 130K subscribers
 // Geometric Eye
 // Thanks to Chrisir on https://forum.processing.org/one/topic/scrible-and-color.html for the flood fill code
-// Porcessing code on github at: https://github.com/rupertrussell/geometric_eye
+// Java Processing code on github at: https://github.com/rupertrussell/geometric_eye
 
 FloodFill1 myFloodFill ;
 
